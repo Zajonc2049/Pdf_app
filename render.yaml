@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: telegram-pdf-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: PORT
+        value: 5000
